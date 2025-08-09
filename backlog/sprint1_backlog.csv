@@ -1,0 +1,13 @@
+id,title,description,type,assignee,labels,acceptance_criteria,estimate_points,priority,dependencies
+1,Monorepo scaffold,Create repo structure,chore,Docs/Community,['infra'],Folders created,2,P1,
+2,Agent workflow graph,Define graph,feature,Orchestrator,['agents'],Graph documented,3,P1,1
+3,IA & key flows,Onboarding/Plan/Meal/List,design,UX System,['design'],Flows approved,3,P1,2
+6,JSON schemas,Plan/recipe/shopping list,feature,QA/Eval,['schemas'],Schemas published,2,P1,2
+8,Planner v1,Constraints + plan assembly,feature,Planner,['agents'],7-day plan passes evaluators,5,P1,6
+13,RN app scaffolding,Expo Router screens,feature,Frontend,['frontend'],Detox E2E onboarding→plan→list,8,P1,"3,6,8"
+17,Privacy copy & settings,Local-first + consent,feature,Frontend,['privacy'],Settings with toggles,2,P1,13
+21,Adopt AI Design Thinking Playbook,Playbook + gates,docs,Docs/Community,['process'],Linked from README,1,P1,
+22,Research Framework setup,Templates + consent + clustering,research,Discovery,['research'],Sample insights run,3,P1,21
+23,Ethics & Guardrails board,Evaluator rules + cadence,feature,QA/Eval,"['ethics', 'quality']",Tests block merges,2,P1,"6,8"
+24,Metrics scorecard (weekly),"Automate TTFP, swaps, adherence",feature,Backend,['metrics'],Report generated,3,P2,"13,17"
+25,Community: Call for Cuisines,Docs + acceptance tests,docs,Docs/Community,"['community', 'i18n']",First PRs merged,2,P2,21

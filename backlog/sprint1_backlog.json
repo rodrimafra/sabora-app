@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "title": "Monorepo scaffold",
+    "description": "Create repo structure",
+    "type": "chore",
+    "assignee": "Docs/Community",
+    "labels": [
+      "infra"
+    ],
+    "acceptance_criteria": "Folders created",
+    "estimate_points": 2,
+    "priority": "P1",
+    "dependencies": ""
+  },
+  {
+    "id": 2,
+    "title": "Agent workflow graph",
+    "description": "Define graph",
+    "type": "feature",
+    "assignee": "Orchestrator",
+    "labels": [
+      "agents"
+    ],
+    "acceptance_criteria": "Graph documented",
+    "estimate_points": 3,
+    "priority": "P1",
+    "dependencies": "1"
+  },
+  {
+    "id": 3,
+    "title": "IA & key flows",
+    "description": "Onboarding/Plan/Meal/List",
+    "type": "design",
+    "assignee": "UX System",
+    "labels": [
+      "design"
+    ],
+    "acceptance_criteria": "Flows approved",
+    "estimate_points": 3,
+    "priority": "P1",
+    "dependencies": "2"
+  },
+  {
+    "id": 6,
+    "title": "JSON schemas",
+    "description": "Plan/recipe/shopping list",
+    "type": "feature",
+    "assignee": "QA/Eval",
+    "labels": [
+      "schemas"
+    ],
+    "acceptance_criteria": "Schemas published",
+    "estimate_points": 2,
+    "priority": "P1",
+    "dependencies": "2"
+  },
+  {
+    "id": 8,
+    "title": "Planner v1",
+    "description": "Constraints + plan assembly",
+    "type": "feature",
+    "assignee": "Planner",
+    "labels": [
+      "agents"
+    ],
+    "acceptance_criteria": "7-day plan passes evaluators",
+    "estimate_points": 5,
+    "priority": "P1",
+    "dependencies": "6"
+  },
+  {
+    "id": 13,
+    "title": "RN app scaffolding",
+    "description": "Expo Router screens",
+    "type": "feature",
+    "assignee": "Frontend",
+    "labels": [
+      "frontend"
+    ],
+    "acceptance_criteria": "Detox E2E onboarding\u2192plan\u2192list",
+    "estimate_points": 8,
+    "priority": "P1",
+    "dependencies": "3,6,8"
+  },
+  {
+    "id": 17,
+    "title": "Privacy copy & settings",
+    "description": "Local-first + consent",
+    "type": "feature",
+    "assignee": "Frontend",
+    "labels": [
+      "privacy"
+    ],
+    "acceptance_criteria": "Settings with toggles",
+    "estimate_points": 2,
+    "priority": "P1",
+    "dependencies": "13"
+  },
+  {
+    "id": 21,
+    "title": "Adopt AI Design Thinking Playbook",
+    "description": "Playbook + gates",
+    "type": "docs",
+    "assignee": "Docs/Community",
+    "labels": [
+      "process"
+    ],
+    "acceptance_criteria": "Linked from README",
+    "estimate_points": 1,
+    "priority": "P1",
+    "dependencies": ""
+  },
+  {
+    "id": 22,
+    "title": "Research Framework setup",
+    "description": "Templates + consent + clustering",
+    "type": "research",
+    "assignee": "Discovery",
+    "labels": [
+      "research"
+    ],
+    "acceptance_criteria": "Sample insights run",
+    "estimate_points": 3,
+    "priority": "P1",
+    "dependencies": "21"
+  },
+  {
+    "id": 23,
+    "title": "Ethics & Guardrails board",
+    "description": "Evaluator rules + cadence",
+    "type": "feature",
+    "assignee": "QA/Eval",
+    "labels": [
+      "ethics",
+      "quality"
+    ],
+    "acceptance_criteria": "Tests block merges",
+    "estimate_points": 2,
+    "priority": "P1",
+    "dependencies": "6,8"
+  },
+  {
+    "id": 24,
+    "title": "Metrics scorecard (weekly)",
+    "description": "Automate TTFP, swaps, adherence",
+    "type": "feature",
+    "assignee": "Backend",
+    "labels": [
+      "metrics"
+    ],
+    "acceptance_criteria": "Report generated",
+    "estimate_points": 3,
+    "priority": "P2",
+    "dependencies": "13,17"
+  },
+  {
+    "id": 25,
+    "title": "Community: Call for Cuisines",
+    "description": "Docs + acceptance tests",
+    "type": "docs",
+    "assignee": "Docs/Community",
+    "labels": [
+      "community",
+      "i18n"
+    ],
+    "acceptance_criteria": "First PRs merged",
+    "estimate_points": 2,
+    "priority": "P2",
+    "dependencies": "21"
+  }
+]
