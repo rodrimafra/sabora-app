@@ -28,7 +28,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.content}>
-        <Text style={styles.title}>MealPlan Mobile</Text>
+        <Text style={styles.title}>Sabora</Text>
         <Text style={styles.label}>Backend URL</Text>
         <TextInput
           style={styles.input}
@@ -76,3 +76,4 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
 });
+

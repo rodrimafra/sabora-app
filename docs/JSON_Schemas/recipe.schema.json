@@ -1,3 +1,183 @@
 {
-  "title": "Recipe"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sabora.app/schemas/recipe.schema.json",
+  "title": "Recipe",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "total_time_min",
+    "ingredients",
+    "instructions",
+    "nutrition"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable identifier"
+    },
+    "locale": {
+      "type": "string",
+      "description": "e.g., en, pt-BR, es"
+    },
+    "name": {
+      "type": "string"
+    },
+    "cuisine": {
+      "type": "string",
+      "description": "e.g., br, med, it, mx"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "servings": {
+      "type": "number",
+      "minimum": 0.1,
+      "default": 1
+    },
+    "prep_time_min": {
+      "type": "number",
+      "minimum": 0
+    },
+    "cook_time_min": {
+      "type": "number",
+      "minimum": 0
+    },
+    "total_time_min": {
+      "type": "number",
+      "minimum": 0
+    },
+    "ingredients": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "quantity",
+          "unit"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number",
+            "minimum": 0
+          },
+          "unit": {
+            "type": "string",
+            "description": "g, kg, ml, cup, tbsp, tsp, pcs, etc."
+          },
+          "preparation": {
+            "type": "string",
+            "description": "chopped, minced, etc."
+          },
+          "category": {
+            "type": "string",
+            "description": "Produce, Grains, Pantry, Meat, Dairy, etc."
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "instructions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "time_estimate_min": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "allergens": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "peanuts",
+          "tree_nuts",
+          "dairy",
+          "egg",
+          "soy",
+          "wheat",
+          "gluten",
+          "fish",
+          "shellfish",
+          "sesame"
+        ]
+      }
+    },
+    "equipment": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "nutrition": {
+      "type": "object",
+      "required": [
+        "energy_kcal",
+        "protein_g",
+        "carbs_g",
+        "fat_g",
+        "sodium_mg"
+      ],
+      "properties": {
+        "energy_kcal": {
+          "type": "number",
+          "minimum": 0
+        },
+        "protein_g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "carbs_g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "fat_g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "fiber_g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "sugar_g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "sodium_mg": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
 }

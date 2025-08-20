@@ -8,6 +8,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (_req, res) => {
+  res.send(
+    "Sabora API. Try GET /health, POST /api/plan/echo, POST /api/recipe/normalize"
+  );
+});
+
 app.get("/health", (_req, res) => {
   res.json({ ok: true });
 });

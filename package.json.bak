@@ -1,40 +1,28 @@
 {
-  "name": "sabora",
+  "name": "starter",
   "version": "1.0.0",
-  "description": "AI-first meal planning app - Sabora",
+  "description": "AI-first meal planning app.",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "build:types": "tsx scripts/generate-types.ts",
-    "dev": "tsx src/server.ts",
-    "test": "vitest"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.59.0",
     "@langchain/langgraph": "^0.4.3",
     "@langchain/openai": "^0.6.7",
-    "cors": "^2.8.5",
     "dotenv": "^17.2.1",
-    "express": "^5.1.0",
     "node-fetch": "^3.3.2",
     "zod": "^3.25.76",
     "zod-to-json-schema": "^3.24.6"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.3",
     "@types/node": "^24.2.1",
-    "json-schema-to-typescript": "^15.0.4",
     "tsx": "^4.20.3",
-    "typescript": "^5.9.2",
     "vitest": "^1.6.1"
-  },
-  "overrides": {
-    "esbuild": "^0.25.8"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "mealplan-mobile",
+  "name": "sabora-mobile",
   "version": "0.0.1",
   "private": true,
   "main": "node_modules/expo/AppEntry.js",
@@ -16,6 +16,8 @@
     "react-native": "0.76.0"
   },
   "devDependencies": {
+    "@types/react": "^18.3.23",
+    "@types/react-native": "^0.73.0",
     "babel-preset-expo": "^11.0.0",
     "typescript": "^5.5.4"
   }

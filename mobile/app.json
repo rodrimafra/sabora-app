@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "MealPlan",
-    "slug": "mealplan-mobile",
-    "scheme": "mealplan",
+    "name": "Sabora",
+    "slug": "sabora-mobile",
+    "scheme": "sabora",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -29,3 +29,4 @@
     "plugins": []
   }
 }
+

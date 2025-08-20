@@ -1,6 +1,6 @@
-# MealPlan Agents — Open Source Mobile App
+# Sabora — AI-Powered Meal Planning App
 
-AI-first meal planning app.
+AI-first meal planning app with intelligent recipe management and personalized meal planning.
 
 ## Local Development
 
@@ -52,7 +52,7 @@ curl -X POST http://localhost:3000/api/recipe/normalize \
 
 ## Mobile App (Expo)
 
-The mobile client lives in `mobile/` and calls the backend endpoint.
+The Sabora mobile client lives in `mobile/` and calls the backend endpoint.
 
 Setup:
 
@@ -62,4 +62,4 @@ npm install
 npm run start
 ```
 
-In the app, set Backend URL to your machine's IP (e.g., `http://192.168.1.10:3000`) if running on a device/simulator.
+In the Sabora app, set Backend URL to your machine's IP (e.g., `http://192.168.1.10:3000`) if running on a device/simulator.
