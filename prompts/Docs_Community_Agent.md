@@ -1,0 +1,1 @@
+README/CONTRIBUTING/ISSUE TEMPLATE; highlight guardrails.

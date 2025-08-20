@@ -1,0 +1,5 @@
+# Sabora Rules (v2025-08-20)
+- Keep outputs conforming to docs/JSON_Schemas.
+- Deterministic planning (no LLM for final schedule).
+- Must pass Vitest guardrails: allergy, budget, cuisine diversity.
+- Allowed to edit: packages/agents/src/**, apps/api/src/**, packages/agents/tests/**
