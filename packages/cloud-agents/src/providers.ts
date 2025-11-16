@@ -1,5 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk';
-import OpenAI from '@langchain/openai';
+import OpenAI from 'openai';
 
 export type ModelProvider = 'openai' | 'anthropic';
 
@@ -20,19 +20,18 @@ class OpenAIProvider implements LLMProvider {
     this.model = model;
     this.client = new OpenAI({
       apiKey: apiKey ?? process.env.OPENAI_API_KEY,
-      model: this.model,
-      temperature: 0,
     });
   }
   async generate(input: string, system?: string): Promise<string> {
+    const messages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
+      ...(system ? [{ role: 'system' as const, content: system }] : []),
+      { role: 'user', content: input },
+    ];
     const res = await this.client.chat.completions.create({
-      messages: [
-        system ? { role: 'system', content: system } : undefined,
-        { role: 'user', content: input },
-      ].filter(Boolean) as any,
       model: this.model,
+      messages,
       temperature: 0,
-    } as any);
+    });
     const content = res.choices?.[0]?.message?.content ?? '';
     return typeof content === 'string' ? content : JSON.stringify(content);
   }
@@ -65,5 +64,4 @@ export function createProviderFromEnv(): LLMProvider {
   }
   return new OpenAIProvider(process.env.LLM_MODEL ?? 'gpt-4o-mini');
 }
-
 

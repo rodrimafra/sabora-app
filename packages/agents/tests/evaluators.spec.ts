@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { normalizeRecipeFromText, NormalizedRecipe } from '../../../src/agents/normalizeRecipe';
+import { normalizeRecipeFromText, NormalizedRecipe } from '@sabora/cloud-agents';
 
 describe('Evaluators (merge blockers)', () => {
   it('normalizes free-text recipe into strict schema', async () => {

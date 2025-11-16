@@ -18,3 +18,4 @@ export const createShoppingList = async (mealPlan: any): Promise<ShoppingList> =
   
   throw new Error('createShoppingList not yet implemented - run Shopping_Agent prompt in Cursor');
 };
+

@@ -1,13 +1,14 @@
 import { describe, it, expect } from 'vitest';
-import { planWeek } from '../src/planning.js';
+import { planWeek } from '@sabora/cloud-agents';
 
 describe('Planning Agent', () => {
   it('should reject invalid input', async () => {
     const invalidInput = {
       goals: [],
       allergies: ['peanuts'],
+      dislikes: [],
       cuisines: ['br'],
-      budgetTier: 'mid',
+      budgetTier: 'mid' as const,
       dailyPrepMinutes: 40,
       locale: 'pt-BR'
     };

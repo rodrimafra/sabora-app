@@ -2,7 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { graph } from "./graph";
-import { normalizeRecipeFromText } from "./agents/normalizeRecipe";
+import { normalizeRecipeFromText } from "@sabora/cloud-agents";
 
 const app = express();
 app.use(cors());

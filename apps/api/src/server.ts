@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import { planWeek } from '../../../packages/agents/src/planning.js';
-import { createShoppingList } from '../../../packages/agents/src/shopping.js';
+import { planWeek } from '@sabora/cloud-agents';
+import { createShoppingList } from '@sabora/cloud-agents';
 
 const app = express();
 const PORT = process.env.PORT || 8787;

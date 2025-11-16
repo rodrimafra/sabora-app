@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { createProviderFromEnv } from '../../packages/agents/src/providers';
+import { createProviderFromEnv } from './providers.js';
 
 export const NormalizedRecipe = z.object({
   title: z.string().min(1),
@@ -48,3 +48,4 @@ export async function normalizeRecipeFromText(freeText: string): Promise<Normali
   }
   return NormalizedRecipe.parse({ title, ingredients: [], steps });
 }
+

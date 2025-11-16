@@ -2,14 +2,12 @@
   "name": "@sabora/agents",
   "version": "1.0.0",
   "type": "module",
-  "main": "src/index.ts",
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@langchain/langgraph": "^0.4.3",
-    "@langchain/core": "^0.3.0"
+    "@sabora/cloud-agents": "file:../cloud-agents"
   },
   "devDependencies": {
     "vitest": "^1.6.1"

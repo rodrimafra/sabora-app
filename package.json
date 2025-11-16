@@ -4,6 +4,9 @@
   "description": "AI-first meal planning app - Sabora",
   "main": "index.js",
   "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
   "directories": {
     "doc": "docs"
   },
@@ -18,9 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.59.0",
-    "@langchain/langgraph": "^0.4.3",
-    "@langchain/openai": "^0.6.7",
+    "@sabora/cloud-agents": "file:packages/cloud-agents",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",

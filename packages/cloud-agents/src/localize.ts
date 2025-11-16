@@ -17,3 +17,4 @@ export const localizeContent = async (
   
   throw new Error('localizeContent not yet implemented - run Localization_Agent prompt in Cursor');
 };
+

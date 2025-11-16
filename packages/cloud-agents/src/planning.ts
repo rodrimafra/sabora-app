@@ -29,3 +29,4 @@ export const planWeek = async (input: PlanningInput): Promise<MealPlan> => {
   
   throw new Error('planWeek not yet implemented - run Orchestrator_Upgrade prompt in Cursor');
 };
+
